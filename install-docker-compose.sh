@@ -6,6 +6,9 @@ set -euo pipefail
 # Target: Ubuntu 20.04 / 22.04 / 24.04
 # ==============================================================
 
+echo "==> Updating system package list..."
+sudo apt update
+
 echo "==> Removing old/conflicting Docker packages (if any)..."
 sudo apt-get remove -y docker docker-engine docker.io containerd runc 2>/dev/null || true
 
